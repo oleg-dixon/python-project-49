@@ -1,4 +1,12 @@
 # Ignore Python cache
+*.egg-info
+__pycache__
+dist/
+*.pyc
+.venv
+.coverage
+coverage.xml
+*_cache/
 __pycache__
 __pycache__/
 /__pycache__
