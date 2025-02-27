@@ -20,8 +20,9 @@ def calc_game():
             print('Correct!')
             correct_answers_count += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{generate_result}'.")
-            print(f"Let's try again, {user_name}!")
+            print(f"{answer} is wrong answer;(. " 
+                  f"Correct answer was {generate_result}"
+                  f"\nLet's try again, {user_name}!")
             break
 
     if correct_answers_count == correct_answers_need:
