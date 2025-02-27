@@ -8,6 +8,4 @@
 | Tool                                                                   | Description                                             |
 |------------------------------------------------------------------------|---------------------------------------------------------|
 | [asciinema_even](https://asciinema.org/a/yBcX45Opf9uTkE1x1YJnxakAF)    | "Record terminal session in the Even Game"              |
-|------------------------------------------------------------------------|---------------------------------------------------------|
-| [asciinema_calc](https://asciinema.org/a/OpPs8qGSN1t9sLpHN4tUEhkvY)    | "Record terminal session in the Calculator Game"        |              |
-|------------------------------------------------------------------------|---------------------------------------------------------|
+| [asciinema_calc](https://asciinema.org/a/OpPs8qGSN1t9sLpHN4tUEhkvY)    | "Record terminal session in the Calculator Game"        |
