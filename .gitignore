@@ -1,19 +1,21 @@
-# Ignore Python cache
+# Ignore cache
 *.egg-info
-__pycache__
 dist/
 *.pyc
-.venv
-.coverage
-coverage.xml
 *_cache/
 __pycache__
 __pycache__/
 /__pycache__
+*/__pycache__/
 **/__pycache__/
+***/__pycache__/
+*__pycache__
+**__pycache__
+***__pycache__
 __pycache__/
 *.py[cod]
 *$py.class
+**/__pycache__
 
 # Ignore Python version
 .python-version
