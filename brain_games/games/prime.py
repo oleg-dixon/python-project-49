@@ -25,7 +25,7 @@ def prime_game():
     """ Launching "Is it a prime number?" game.
     """
     description = (
-    f'Answer "yes" if given number is prime. 
-    Otherwise answer "no".'
+    'Answer "yes" if given number is prime. '
+    'Otherwise answer "no".'
     )
     engine.run_game(description, generate_even_question)
