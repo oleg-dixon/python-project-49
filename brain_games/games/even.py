@@ -14,5 +14,5 @@ def generate_even_question():
 def even_game():
     """ Launching the "Parity Check" game.
     """
-    description = "Answer 'yes' if the number is even, otherwise answer 'no'."
+    description = 'Answer "yes" if the number is even, otherwise answer "no".'
     engine.run_game(description, generate_even_question) 
