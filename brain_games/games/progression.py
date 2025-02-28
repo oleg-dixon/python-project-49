@@ -9,11 +9,11 @@ def generate_even_question():
     start = random.randint(1, 100)
     step = random.randint(2, 10) 
     length = random.randint(5, 10)
-    question = [start + step * i for i in range(length)]
+    progression = [start + step * i for i in range(length)]
     hidden_index = random.randint(0, length - 1)
-    correct_answer = question[hidden_index]
-    question[hidden_index] = '..'
-    return question, correct_answer
+    correct_answer = progression[hidden_index]
+    progression[hidden_index] = '..'
+    return progression, correct_answer
 
 
 def progression_game():
