@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games.scripts.brain_games import main
+from brain_games.scripts.brain_games import greeting
 
 
 def run_game(game_description, generate_question_and_answer):
@@ -9,7 +9,7 @@ def run_game(game_description, generate_question_and_answer):
         :param generate_question_and_answer: A function that 
         generates a question and a correct answer
     """
-    print(main())
+    print(greeting())
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!')
     print(game_description)
