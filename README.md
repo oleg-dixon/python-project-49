@@ -23,32 +23,44 @@ To start the game:
 make brain-calc
 ```
 
-Even numbers
-To win this game you have to give an answer is given number even or not
+Even numbers: 
+To win this game you have to give an answer is given number even or not.
 
-To start the game run brain-even
+To start the game:
+```bash
+make brain-even
+```
 
-Greatest common dividor
+Greatest common dividor: 
 To win this game you have to find a GCD of three pairs of numbers
 
-To start the game run brain-gcd
+To start the game:
+```bash
+make brain-gcd
+```
 
-Prime numbers
+Prime numbers: 
 To win this game you have to give an answer ig given number prime or not
 
-To start the game run brain-prime
+To start the game:
+```bash
+make brain-prime
+```
 
-Progression
+Progression: 
 To win this game you have to find the missing number in progression
 
-To start the game run brain-progression
+To start the game:
+```bash
+make brain-progression
+```
 
 ### Links
 
-| Tool (Asciinema play)                                                  | Description                                             |
+| Asciinema play videos                                                  | Description                                             |
 |------------------------------------------------------------------------|---------------------------------------------------------|
-| [Even Game](https://asciinema.org/a/Dk9UmLfKFdNlzgZMA6SBFg7nm)    | "Record terminal session in the Even Game" |
-| [Calculator Game](https://asciinema.org/a/QTkKcgnDpcgDrpgar1sbvzCYW)    | "Record terminal session in the Calculator Game" |
-| [GCD Game](https://asciinema.org/a/MVQjqLMNazdnnUqtgQYkPkusp)     | "Record terminal session in the GCD Game" |
-| [Progression Game](https://asciinema.org/a/Cys7EA2mL8zwQRJNXdLPIB8AD) | "Record terminal session in the Arithmetic progression Game" |
-| [Prime Game](https://asciinema.org/a/1oUAJ1vSz8GoMTexZRwZwRuDB) | "Record terminal session in the 'Is it a prime number?' Game" |
+| [Even Game](https://asciinema.org/a/Dk9UmLfKFdNlzgZMA6SBFg7nm)    | Record terminal session in the "Even Game" |
+| [Calculator Game](https://asciinema.org/a/QTkKcgnDpcgDrpgar1sbvzCYW)    | Record terminal session in the "Calculator Game" |
+| [GCD Game](https://asciinema.org/a/MVQjqLMNazdnnUqtgQYkPkusp)     | Record terminal session in the "GCD Game" |
+| [Progression Game](https://asciinema.org/a/Cys7EA2mL8zwQRJNXdLPIB8AD) | Record terminal session in the "Arithmetic progression Game" |
+| [Prime Game](https://asciinema.org/a/1oUAJ1vSz8GoMTexZRwZwRuDB) | Record terminal session in the "Is it a prime number? Game" |
