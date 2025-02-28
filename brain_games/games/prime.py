@@ -16,9 +16,9 @@ def is_prime(number):
 def generate_even_question():
     """ Generating a question for "Is it a prime number?" game.
     """
-    question = random.randint(1, 100)
-    correct_answer = 'yes' if is_prime(question) else 'no'
-    return question, correct_answer
+    number = random.randint(1, 100)
+    correct_answer = 'yes' if is_prime(number) else 'no'
+    return number, correct_answer
 
 
 def prime_game():
