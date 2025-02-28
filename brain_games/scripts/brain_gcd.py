@@ -5,5 +5,5 @@ def main():
     gcd_game()
 
 
-if __name__ == '__main___':
+if __name__ == '__main__':
     main()
