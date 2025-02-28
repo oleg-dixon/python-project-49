@@ -1,7 +1,8 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "Play five games and try to win in all of it!"
+authors = oleg-dixon
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
