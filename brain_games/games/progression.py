@@ -13,6 +13,7 @@ def generate_even_question():
     hidden_index = random.randint(0, length - 1)
     correct_answer = progression[hidden_index]
     progression[hidden_index] = '..'
+    progression = ' '.join(map(str, progression))
     return progression, correct_answer
 
 
