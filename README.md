@@ -16,7 +16,8 @@ INSTRUCTIONS:
 This is a five math games:
 
 Calculator:
-To win this games you have to solve three math tasks
+To win this games you have to solve three math tasks.
+
 To start the game:
 ```bash
 make brain-calc
