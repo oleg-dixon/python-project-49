@@ -1,44 +1,35 @@
-import random
-
 import prompt
 
+from brain_games.scripts.run_brain_games import greeting
 
-def generate_number():
-    """ A function for generating random numbers
+
+def run_game(game_description, generate_question_and_answer):
+    """ A common game engine for all games.
+        :param game_description: Description of the game (string)
+        :param generate_question_and_answer: A function that 
+        generates a question and a correct answer
     """
-    number = random.randint(0, 100)
-    print(f'Question: {number}')
-    return number
+    print(greeting())
+    user_name = prompt.string('May I have your name? ')
+    print(f'Hello, {user_name}!')
+    print(game_description)
+    
+    correct_answers_need = 3
+    correct_answers_count = 0
 
+    while correct_answers_count < correct_answers_need:
+        question, correct_answer = generate_question_and_answer()
+        print(f'Question: {question}')
+        user_answer = prompt.string('You answer: ')
 
-def generate_expression():
-    """ A function for generating an expression and its result
-    """
-    operators = ['+', '-', '*']
-    num_1 = random.randint(0, 100)
-    num_2 = random.randint(0, 100)
-    operator = random.choice(operators)
-    expression = f'{num_1} {operator} {num_2}'
-    result = eval(expression)
-    print(f'Question: {expression}')
-    return expression, result
+        if user_answer == str(correct_answer):
+            print('Correct!')
+            correct_answers_count += 1
+        else:
+            print(f"{user_answer} is wrong answer ;(. " 
+                  f"Correct answer was {correct_answer}"
+                  f"\nLet's try again, {user_name}!")
+            break
 
-
-def user_answer_string():
-    """ User response string input  function
-    """
-    user_answer_string = prompt.string('Your answer: ')
-    return user_answer_string
-
-
-def user_answer_integer():
-    """ User response integer input  function
-    """
-    user_answer_integer = prompt.integer('Your answer: ')
-    return user_answer_integer
-
-
-def is_even(number):
-    """ The number parity check function
-    """
-    return number % 2 == 0
+    if correct_answers_count == correct_answers_need:
+        print(f'Congratulations, {user_name}!')
