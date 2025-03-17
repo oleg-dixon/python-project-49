@@ -1,6 +1,5 @@
 import prompt
 
-
 CORRECT_ANSWERS_NEED = 3
 
 
