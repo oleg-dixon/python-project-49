@@ -1,10 +1,22 @@
 import random
 
-from brain_games import engine
+
+DESCRIPTION = (
+    'Answer "yes" if given number is prime. '
+    'Otherwise answer "no".'
+    )
 
 
 def is_prime(number):
-    """A function to check if a number is prime."""
+    """
+    Checks if a number is prime.
+
+    Args:
+        number (int): The number to check.
+
+    Returns:
+        bool: True if the number is prime, otherwise False.
+    """
     if number < 2:
         return False
     for i in range(2, int(number**0.5) + 1):
@@ -13,19 +25,25 @@ def is_prime(number):
     return True
 
 
-def generate_even_question():
-    """ Generating a question for "Is it a prime number?" game.
+def generate_round():
+    """ 
+    Generates a question for the "Is it a prime number?" game.
+
+    Returns:
+        int: A random integer between 1 and 100.
     """
-    number = random.randint(1, 100)
-    correct_answer = 'yes' if is_prime(number) else 'no'
-    return number, correct_answer
+    question = random.randint(1, 100)
+    return question
 
 
-def prime_game():
-    """ Launching "Is it a prime number?" game.
+def generate_answer(question):
+    """ 
+    Determines if the given number is prime.
+
+    Args:
+        question (int): The number to check for primality.
+
+    Returns:
+        str: 'yes' if the number is prime, otherwise 'no'.
     """
-    description = (
-    'Answer "yes" if given number is prime. '
-    'Otherwise answer "no".'
-    )
-    engine.run_game(description, generate_even_question)
+    return 'yes' if is_prime(question) else 'no'
