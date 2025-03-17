@@ -1,6 +1,5 @@
 import random
 
-
 DESCRIPTION = 'What number is missing in the progression?'
 
 
@@ -9,7 +8,8 @@ def generate_round():
     Generates a question for the "Arithmetic progression" game.
 
     Returns:
-        str: A string representing the arithmetic progression with one hidden element.
+        str: A string representing the arithmetic progression 
+        with one hidden element.
     """
     start = random.randint(1, 100)
     step = random.randint(2, 10)
@@ -26,7 +26,8 @@ def generate_answer(question):
     Calculates the correct answer for the "Arithmetic progression" game.
 
     Args:
-        question (str): A string representing the arithmetic progression with one hidden element.
+        question (str): A string representing the arithmetic 
+        progression with one hidden element.
 
     Returns:
         str: The hidden number in the progression.
