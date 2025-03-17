@@ -35,6 +35,7 @@ def generate_answer(question):
     elements = question.split()
     hidden_index = elements.index('..')
     progression = []
+    
     for i, element in enumerate(elements):
         if element == '..':
             progression.append(None)
