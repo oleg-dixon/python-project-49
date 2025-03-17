@@ -1,24 +1,57 @@
 import random
 
-from brain_games import engine
+
+DESCRIPTION = 'What number is missing in the progression?'
 
 
-def generate_even_question():
-    """ Generating a question for the "Arithmetic progression" game.
+def generate_round():
+    """ 
+    Generates a question for the "Arithmetic progression" game.
+
+    Returns:
+        str: A string representing the arithmetic progression with one hidden element.
     """
     start = random.randint(1, 100)
-    step = random.randint(2, 10) 
+    step = random.randint(2, 10)
     length = random.randint(5, 10)
     progression = [start + step * i for i in range(length)]
-    hidden_index = random.randint(0, length - 1)
-    correct_answer = progression[hidden_index]
+    hidden_index = random.randint(0, len(progression) - 1)
     progression[hidden_index] = '..'
-    progression = ' '.join(map(str, progression))
-    return progression, correct_answer
+    question = ' '.join(map(str, progression))
+    return question
 
 
-def progression_game():
-    """ Launching "Arithmetic progression" game.
+def generate_answer(question):
+    """ 
+    Calculates the correct answer for the "Arithmetic progression" game.
+
+    Args:
+        question (str): A string representing the arithmetic progression with one hidden element.
+
+    Returns:
+        str: The hidden number in the progression.
     """
-    description = 'What number is missing in the progression?'
-    engine.run_game(description, generate_even_question)
+    elements = question.split()
+    hidden_index = elements.index('..')
+    progression = []
+    for i, element in enumerate(elements):
+        if element == '..':
+            progression.append(None)
+        else:
+            progression.append(int(element))
+
+    if hidden_index == 0:
+        step = progression[2] - progression[1]
+    elif hidden_index == len(progression) - 1:
+        step = progression[1] - progression[0]
+    else:
+        step = progression[1] - progression[0]
+
+    if hidden_index == 0:
+        correct_answer = progression[1] - step
+    elif hidden_index == len(progression) - 1:
+        correct_answer = progression[-2] + step
+    else:
+        correct_answer = progression[hidden_index - 1] + step
+
+    return str(correct_answer)
