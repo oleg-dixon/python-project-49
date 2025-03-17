@@ -1,6 +1,5 @@
 import random
 
-
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
@@ -9,7 +8,8 @@ def generate_round():
     Generates a question for the "Greatest Common Divisor" game.
 
     Returns:
-        str: A string containing two random integers between 0 and 100, separated by a space.
+        str: A string containing two random integers between 0 and 100, 
+        separated by a space.
     """
     num_1 = random.randint(0, 100)
     num_2 = random.randint(0, 100)
