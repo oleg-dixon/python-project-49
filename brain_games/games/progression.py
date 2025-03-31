@@ -43,7 +43,8 @@ def generate_answer(question):
             progression.append(int(element))
 
     known_indices = [i for i, x in enumerate(progression) if x is not None]
-    first_val, second_val = progression[known_indices[0]], progression[known_indices[1]]
+    first_val = progression[known_indices[0]]
+    second_val = progression[known_indices[1]]
     first_idx, second_idx = known_indices[0], known_indices[1]
     step = (second_val - first_val) // (second_idx - first_idx)
 
