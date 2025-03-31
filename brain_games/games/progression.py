@@ -42,12 +42,10 @@ def generate_answer(question):
         else:
             progression.append(int(element))
 
-    if hidden_index == 0:
-        step = progression[2] - progression[1]
-    elif hidden_index == len(progression) - 1:
-        step = progression[1] - progression[0]
-    else:
-        step = progression[1] - progression[0]
+    known_indices = [i for i, x in enumerate(progression) if x is not None]
+    first_val, second_val = progression[known_indices[0]], progression[known_indices[1]]
+    first_idx, second_idx = known_indices[0], known_indices[1]
+    step = (second_val - first_val) // (second_idx - first_idx)
 
     if hidden_index == 0:
         correct_answer = progression[1] - step
