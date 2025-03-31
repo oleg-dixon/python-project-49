@@ -9,6 +9,7 @@ Play five games and try to win in all of it!
 
 ```bash
 git clone git@github.com:oleg-dixon/python-project-49.git
+
 make install
 ```
 
